@@ -39,4 +39,8 @@ confirm-body =
         [log-out] log out
         [enter-bios] restart into BIOS
         *[other] apply the selected action
-    } automatically in { $countdown } seconds.
+    } automatically { $countdown ->
+        [0] now.
+        [1] in 1 second.
+        *[other] in {$countdown} seconds.
+    }
